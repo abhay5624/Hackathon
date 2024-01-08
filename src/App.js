@@ -2,6 +2,9 @@ import Navbar from './components/Navbar';
 import Shopping from './views/Shopping';
 import { useEffect, useState } from 'react'; 
 import axios from 'axios';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SingleProduct from './components/SingleProduct';
+
 function App() {
   const [product, setProduct] = useState([{
     "category": "",
@@ -25,9 +28,14 @@ const getProduct = async () => {
   },[]);
 
   return (
-    <div className="App" style={{background: "#0F0F0F",color: "#fff"}}>
-      <Navbar />
-      <Shopping product={ product} />
+    <div className="App" style={{ background: "#0F0F0F", color: "#fff" }}>
+      <Router>
+          <Navbar />
+          <Routes>
+          <Route path="/" element={<Shopping product={product} />} />
+          <Route path="/singleproduct/:id" element={<SingleProduct />} />
+          </Routes>
+      </Router>
     </div>
   );
 }

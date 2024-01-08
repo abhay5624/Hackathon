@@ -16,7 +16,9 @@ const ProductList = ({filterList}) => {
 }
 const Wrapper = styled.div`
 padding: 9rem 0;
-
+a{
+  text-decoration :none;
+}
 .container {
   max-width: 120rem;
 }

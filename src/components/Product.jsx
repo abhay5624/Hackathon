@@ -1,9 +1,10 @@
 import React from "react";
- 
+ import { NavLink } from "react-router-dom";
 const Product = (curElem) => {
   const { id, name, image, price, category } = curElem;
   return (
     < >
+      <NavLink to={`/singleproduct/${id}`}>
       <div className="card">
         <figure>
           <img src={image} alt={name} />
@@ -16,7 +17,8 @@ const Product = (curElem) => {
             <p className="card-data--price">Rs. {price}</p>
           </div>
         </div>
-      </div>
+        </div>
+        </NavLink>
     </>
   );
 };
