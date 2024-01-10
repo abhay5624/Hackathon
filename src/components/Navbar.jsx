@@ -37,18 +37,6 @@ const NavBar = styled.div`
             width: 100px;
         }
     }
-    .Links-carts{
-        display: flex;
-        justify-content: space-evenly;
-        width: 40%;
-        min-height: 100px;
-        align-items: center;
-        a{
-            padding: 30px;
-            color: black;
-            font-weight: 600;
-            text-decoration: none;
-        }
-    }
+     
 `;
 export default Navbar
